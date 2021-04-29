@@ -11,6 +11,6 @@ phases:
   post_build:
     commands:
       - docker push 398287015812.dkr.ecr.us-east-1.amazonaws.com/fargate-demo-docker-repo:latest
-      - printf '[{"name":"at-ecs-task","imageUri":"%s"}]' 398287015812.dkr.ecr.us-east-1.amazonaws.com/fargate-demo-docker-repo:latest > imagedefinitions.json
+      - printf '[{"name":"fargate-demo-docker-repo","imageUri":"%s"}]' 398287015812.dkr.ecr.us-east-1.amazonaws.com/fargate-demo-docker-repo:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
